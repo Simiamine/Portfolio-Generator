@@ -60,7 +60,7 @@ function generateCSS(config) {
     
     // Remplacer les variables CSS
     const updatedCSS = templateCSS.replace(
-        /\/\* ===== VARIABLES CSS ===== \*\/[\s\S]*?(?=\/\* ===== RESET & BASE ===== \*\/)/,
+        /\/\* ===== VARIABLES CSS.*?\*\/[\s\S]*?(?=\/\* ===== RESET & BASE ===== \*\/)/,
         cssVariables + '\n\n'
     );
     

@@ -1,10 +1,10 @@
 /* ===== VARIABLES CSS - THÈME GÉNÉRÉ AUTOMATIQUEMENT ===== */
 :root {
     /* Couleurs principales */
-    --primary-dark: #5e2933;
-    --primary-light: #815443;
-    --secondary-beige: #a4a1a0;
-    --accent-brown: #70493a;
+    --primary-dark: #2779F5;
+    --primary-light: #040405;
+    --secondary-beige: #454545;
+    --accent-brown: #000000;
     --cream: #f7f6f6;
     --dark: #0a0a0a;
     --text-light: #ffffff;
@@ -12,13 +12,13 @@
     --text-dark: #333333;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #5e2933 0%, #815443 100%);
-    --gradient-secondary: linear-gradient(135deg, #815443 0%, #70493a 100%);
-    --gradient-beige: linear-gradient(135deg, #a4a1a0 0%, #f7f6f6 100%);
+    --gradient-primary: linear-gradient(135deg, #2779F5 0%, #040405 100%);
+    --gradient-secondary: linear-gradient(135deg, #040405 0%, #000000 100%);
+    --gradient-beige: linear-gradient(135deg, #454545 0%, #f7f6f6 100%);
     
     /* Effets */
-    --shadow: 0 10px 30px rgba(94, 41, 51, 0.2);
-    --shadow-lg: 0 20px 60px rgba(94, 41, 51, 0.3);
+    --shadow: 0 10px 30px rgba(39, 121, 245, 0.2);
+    --shadow-lg: 0 20px 60px rgba(39, 121, 245, 0.3);
     --border-radius: 16px;
     --border-radius-large: 100px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
