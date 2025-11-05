@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio de Oumar Traoré - Data Scientist">
+    <meta name="author" content="Oumar Traoré">
+    
+    <title>Oumar Traoré - Portfolio</title>
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <section class="preloader">
+        <div class="spinner">
+            <div class="spinner-rotate"></div>
+        </div>
+    </section>
+
+    <!-- NAVIGATION -->
+    
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="navbar-brand">Oumar Traoré</a>
+            
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="#home" class="nav-link click-scroll">Accueil</a></li>
+                <li><a href="#about" class="nav-link click-scroll">Moi</a></li>
+                <li><a href="#parcours" class="nav-link click-scroll">Parcours</a></li>
+                <li><a href="#projects" class="nav-link click-scroll">Projets</a></li>
+                <li><a href="#skills" class="nav-link click-scroll">Compétences</a></li>
+                <li><a href="#formation" class="nav-link click-scroll">Formation</a></li>
+                <li><a href="#experience" class="nav-link click-scroll">Expérience</a></li>
+                <li><a href="#" class="nav-link" data-modal="contactModal"><i class="bi bi-envelope"></i></a></li>
+                
+                
+                
+            </ul>
+            
+            <button class="navbar-toggler" id="navbar-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MODALS -->
+    
+    <!-- MODAL CONTACT -->
+    <div class="modal" id="contactModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Me Contacter</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Votre nom</label>
+                            <input type="text" class="form-control" id="name" name="Nom" placeholder="Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Votre e-mail</label>
+                            <input type="email" class="form-control" id="email" name="Email" placeholder="jean.dupont@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" placeholder="Bonjour..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                        <div id="formResponse" style="margin-top: 1rem; text-align: center;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO SECTION -->
+        
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="wave-shape wave-shape-1"></div>
+            <div class="wave-shape wave-shape-2"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                
+                <div class="chat-bubble">Je suis Oumar Traoré</div>
+                <div class="chat-bubble">Data Scientist</div>
+                <div class="chat-bubble">Passionné par la Data. Je serais le roi de la data</div>
+            </div>
+            
+            
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+        <!-- À PROPOS -->
+        
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Qui suis-je ? </span>
+                <h2 class="section-title">À propos</h2>
+            </div>
+            
+            <div class="about-content">
+                
+                
+                <div class="about-text">
+                    <h3>À propos</h3>
+                    <p>Etudiant en école d'ingénieur j'aime faire bcp de chose </p>
+                    <p>Le salaire est ma motivation</p>
+                    <p>Number one</p>
+                </div>
+            </div>
+            
+            
+            <div class="about-highlights">
+                
+                <div class="highlight-item">
+                    <i class=""></i>
+                    <h4></h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- PARCOURS (TIMELINE) -->
+        
+    <section class="timeline-section" id="parcours">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Mon Histoire</span>
+                <h2 class="section-title">Mon Parcours</h2>
+            </div>
+            
+            <div class="timeline">
+                
+    <div class="timeline-row">
+        
+    <a href="#formation" class="timeline-item-link">
+        <div class="timeline-item left">
+            <div class="timeline-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+                <small>2021 - 2026</small>
+                <h4>Efrei Paris</h4>
+                <p>Diplôme d&#039;Ingénieur</p>
+            </div>
+        </div>
+    </a>
+        
+    <a href="#experience" class="timeline-item-link">
+        <div class="timeline-item right">
+            <div class="timeline-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="timeline-content">
+                <small>Septembre 2025 - Août 2026</small>
+                <h4>SLB</h4>
+                <p>Conception de modèle de deep learning pour de la detection d&#039;image (computer vision)</p>
+            </div>
+        </div>
+    </a>
+    </div>
+    <div class="timeline-row">
+        
+    <a href="#experience" class="timeline-item-link">
+        <div class="timeline-item left">
+            <div class="timeline-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="timeline-content">
+                <small>Septembre 2024 - Juin 2025</small>
+                <h4>Galeries Lafayette</h4>
+                <p></p>
+            </div>
+        </div>
+    </a>
+        <div></div>
+    </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- PROJETS -->
+        
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Mes réalisations</span>
+                <h2 class="section-title">Projets</h2>
+            </div>
+            
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        
+                        
+                        <div class="project-placeholder">
+                            <i class="fas fa-folder"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3></h3>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+        <!-- COMPÉTENCES -->
+        
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Mes atouts</span>
+                <h2 class="section-title">Compétences Techniques</h2>
+            </div>
+            
+            
+            <h3 style="text-align: center; margin-bottom: 3rem; color: var(--primary-dark);">Langages, Big Data & DevOps</h3>
+            
+            <div class="row justify-content-center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+                
+                <div class="clients-item-height">
+                    <img src="" class="clients-image" alt="Python">
+                    <legend style="text-align:center; font-weight: 600;">Python</legend>
+                </div>
+                <div class="clients-item-height">
+                    <img src="" class="clients-image" alt="C">
+                    <legend style="text-align:center; font-weight: 600;">C</legend>
+                </div>
+                <div class="clients-item-height">
+                    <img src="" class="clients-image" alt="Java">
+                    <legend style="text-align:center; font-weight: 600;">Java</legend>
+                </div>
+            </div>
+            
+            
+            <h3 style="text-align: center; margin: 4rem 0 3rem; color: var(--primary-dark);">Langues</h3>
+            
+            <div class="row justify-content-center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+                
+                <div class="clients-item-height">
+                    
+                    <legend style="text-align:center; font-weight: 600;">Français : Maternelle</legend>
+                </div>
+                <div class="clients-item-height">
+                    
+                    <legend style="text-align:center; font-weight: 600;">Anglais : B2</legend>
+                </div>
+                <div class="clients-item-height">
+                    
+                    <legend style="text-align:center; font-weight: 600;">Espagnol : A2</legend>
+                </div>
+            </div>
+            
+            
+            <h3 style="text-align: center; margin: 4rem 0 3rem; color: var(--primary-dark);">Certifications</h3>
+            
+            <div class="row justify-content-center" style="display: flex; flex-wrap: wrap; justify-content: center;">
+                
+                <div class="clients-item-height">
+                    
+                    <legend style="text-align:center; font-weight: 600;">AI -900</legend>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- FORMATION -->
+        
+    <section class="projects" id="formation">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Mes études</span>
+                <h2 class="section-title">Formation</h2>
+            </div>
+            
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        
+                    </div>
+                    <div class="project-content">
+                        <h3>Efrei Paris</h3>
+                        <h4>Diplôme d&#039;Ingénieur (2021 - 2026)</h4>
+                        <p>Code, Math, Phy, Ang</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- EXPÉRIENCE -->
+        
+    <section class="skills" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Mon parcours professionnel</span>
+                <h2 class="section-title">Expérience Professionnelle</h2>
+            </div>
+            
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Engineer</h3>
+                        <h4>SLB · Paris</h4>
+                        <p style="font-style: italic; color: var(--text-gray);">Septembre 2025 - Août 2026</p>
+                        
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Scientist</h3>
+                        <h4>Galeries Lafayette · Paris</h4>
+                        <p style="font-style: italic; color: var(--text-gray);">Septembre 2024 - Juin 2025</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- FOOTER -->
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025. Tous droits réservés.</p>
+                <p>Conçu avec ❤️ et ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

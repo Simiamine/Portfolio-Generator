@@ -1,0 +1,141 @@
+{
+  "theme": {
+    "primaryColor": "#2779F5",
+    "secondaryColor": "#040405"
+  },
+  "profile": {
+    "name": "Oumar Traoré",
+    "title": "Data Scientist",
+    "tagline": "Passionné par la Data. Je serais le roi de la data",
+    "email": "oumar.16t@gmail.com",
+    "phone": "628777336",
+    "location": "Paris",
+    "availability": "Septembre 2026",
+    "photo": "",
+    "cv": "",
+    "socialLinks": {
+      "linkedin": "",
+      "github": ""
+    }
+  },
+  "about": {
+    "highlights": [
+      {
+        "icon": "",
+        "title": "",
+        "description": ""
+      }
+    ],
+    "floatingCards": [],
+    "paragraphs": [
+      "Etudiant en école d'ingénieur j'aime faire bcp de chose ",
+      "Le salaire est ma motivation",
+      "Number one"
+    ],
+    "sectionTag": "Qui suis-je ? ",
+    "sectionTitle": "À propos",
+    "image": ""
+  },
+  "experiences": [
+    {
+      "title": "AI Engineer",
+      "company": "SLB",
+      "location": "Paris",
+      "period": "Septembre 2025 - Août 2026",
+      "periodShort": "",
+      "description": "Conception de modèle de deep learning pour de la detection d'image (computer vision)",
+      "logo": "",
+      "icon": "fas fa-briefcase",
+      "responsibilities": []
+    },
+    {
+      "title": "Data Scientist",
+      "company": "Galeries Lafayette",
+      "location": "Paris",
+      "period": "Septembre 2024 - Juin 2025",
+      "periodShort": "",
+      "description": "",
+      "logo": "",
+      "icon": "fas fa-briefcase",
+      "responsibilities": []
+    }
+  ],
+  "education": [
+    {
+      "school": "Efrei Paris",
+      "degree": "Diplôme d'Ingénieur",
+      "period": "2021 - 2026",
+      "periodShort": "",
+      "description": "Code, Math, Phy, Ang",
+      "logo": "",
+      "icon": "fas fa-graduation-cap",
+      "courses": []
+    }
+  ],
+  "projects": [
+    {
+      "name": "",
+      "subtitle": "",
+      "description": "",
+      "icon": "fas fa-folder",
+      "image": "",
+      "features": [],
+      "link": ""
+    }
+  ],
+  "skills": {
+    "technologies": [
+      {
+        "name": "Python",
+        "logo": ""
+      },
+      {
+        "name": "C",
+        "logo": ""
+      },
+      {
+        "name": "Java",
+        "logo": ""
+      }
+    ],
+    "languages": [
+      {
+        "name": "Français",
+        "level": "Maternelle",
+        "flag": ""
+      },
+      {
+        "name": "Anglais",
+        "level": "B2",
+        "flag": ""
+      },
+      {
+        "name": "Espagnol",
+        "level": "A2",
+        "flag": ""
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AI -900",
+        "issuer": "",
+        "date": "",
+        "logo": ""
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2025. Tous droits réservés.",
+    "message": "Conçu avec ❤️ et ☕"
+  },
+  "metadata": {
+    "title": "Oumar Traoré - Portfolio",
+    "description": "Portfolio de Oumar Traoré - Data Scientist",
+    "author": "Oumar Traoré",
+    "keywords": [
+      "portfolio",
+      "développeur",
+      "web"
+    ]
+  }
+}

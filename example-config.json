@@ -1,0 +1,388 @@
+{
+  "theme": {
+    "primaryColor": "#5e2933",
+    "secondaryColor": "#815443"
+  },
+  "profile": {
+    "name": "Amine M'ZALI",
+    "title": "Futur Ingénieur Data - Efrei Paris",
+    "tagline": "3 ans d'expérience | Disponible Sept 2026",
+    "photo": "images/moi.jpg",
+    "availability": "Septembre 2026",
+    "email": "amine.mzali@example.com",
+    "location": "Paris, France",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/mzaliamine/",
+      "github": "https://github.com/Simiamine"
+    },
+    "cv": "res/cvfr.pdf"
+  },
+  "about": {
+    "sectionTag": "Qui suis-je ?",
+    "sectionTitle": "À propos",
+    "image": "images/test.png",
+    "paragraphs": [
+      "Actuellement en <strong>dernière année d'école d'ingénieur</strong> à <strong>l'Efrei Paris</strong>, spécialisé en <strong>Big Data et Machine Learning</strong>, je cumule <strong>3 ans d'expérience en alternance</strong> dans le domaine de la data.",
+      "Fort d'une expertise complète en <strong>Data Analysis</strong>, <strong>Data Engineering</strong> et <strong>Data Science</strong>, je cherche à intégrer le monde professionnel à partir de la <strong>rentrée 2026</strong> et suis ouvert à toute opportunité dans ces trois domaines.",
+      "Passionné par l'innovation et la résolution de problèmes, j'ai eu l'opportunité de travailler dans des environnements variés (transport, pharmaceutique, recherche internationale) et je suis toujours curieux d'explorer de nouveaux défis techniques."
+    ],
+    "highlights": [
+      {
+        "icon": "fas fa-chart-line",
+        "title": "Data Analysis",
+        "description": "Analyse et visualisation de données"
+      },
+      {
+        "icon": "fas fa-database",
+        "title": "Data Engineering",
+        "description": "Pipelines ETL et architectures data"
+      },
+      {
+        "icon": "fas fa-brain",
+        "title": "Data Science",
+        "description": "Machine Learning et IA"
+      },
+      {
+        "icon": "fas fa-rocket",
+        "title": "Innovant",
+        "description": "Toujours à la recherche de solutions créatives"
+      },
+      {
+        "icon": "fas fa-users",
+        "title": "Collaboratif",
+        "description": "Travail d'équipe et communication"
+      },
+      {
+        "icon": "fas fa-lightbulb",
+        "title": "Curieux",
+        "description": "Apprentissage continu et veille technologique"
+      }
+    ],
+    "floatingCards": [
+      {
+        "icon": "fas fa-chart-line",
+        "text": "Data Analysis"
+      },
+      {
+        "icon": "fas fa-database",
+        "text": "Data Engineering"
+      },
+      {
+        "icon": "fas fa-brain",
+        "text": "Data Science"
+      }
+    ]
+  },
+  "experiences": [
+    {
+      "title": "Data Analyst (Alternance)",
+      "company": "Sanofi",
+      "location": "Lyon, France",
+      "period": "Septembre 2025 — Aujourd'hui",
+      "periodShort": "Sept 2025 - Aujourd'hui",
+      "description": "Sanofi Data Analyst",
+      "logo": "images/sanofi.png",
+      "icon": "fas fa-briefcase",
+      "responsibilities": [
+        "Analyse de données à l'Accélérateur M&S de Lyon",
+        "Développement de solutions data-driven pour l'industrie pharmaceutique",
+        "Création de tableaux de bord et rapports analytiques",
+        "Collaboration avec les équipes Manufacturing & Supply"
+      ]
+    },
+    {
+      "title": "Stage de Recherche en IA",
+      "company": "UKM (Universiti Kebangsaan Malaysia)",
+      "location": "Malaisie",
+      "period": "Juin 2025 — Septembre 2025",
+      "periodShort": "Juin 2025 - Septembre 2025",
+      "description": "Stage Recherche IA - UKM",
+      "logo": "images/UKM.jpg",
+      "icon": "fas fa-flask",
+      "responsibilities": [
+        "Laboratoire de recherche en Intelligence Artificielle",
+        "Sous la direction du Professeur Zukefli bin Mansour",
+        "Rédaction d'un papier de recherche sur le testing de l'IA AL-Warisan",
+        "Projet gouvernemental malaisien : IA en langue malaise",
+        "Testing, évaluation et amélioration de modèles NLP"
+      ]
+    },
+    {
+      "title": "Data Expert (Alternance)",
+      "company": "RATP",
+      "location": "Paris, France",
+      "period": "Août 2024 — Septembre 2025",
+      "periodShort": "Août 2024 - Septembre 2025",
+      "description": "RATP Data Expert",
+      "logo": "https://www.festival-circulations.com/wp-content/uploads/2016/01/RATP.jpg",
+      "icon": "fas fa-briefcase",
+      "responsibilities": [
+        "Conception d'une plateforme Data sur AWS pour véhicules autonomes",
+        "Développement de pipelines ETL avec AWS Glue (Spark)",
+        "Création de dashboards Amazon QuickSight",
+        "Développement d'interfaces React (Vite)"
+      ]
+    },
+    {
+      "title": "Data Analyst (Apprentissage)",
+      "company": "RATP",
+      "location": "Paris, France",
+      "period": "Sept 2023 — Août 2024",
+      "periodShort": "Sept 2023 - Août 2024",
+      "description": "RATP Data Analyst",
+      "logo": "https://www.festival-circulations.com/wp-content/uploads/2016/01/RATP.jpg",
+      "icon": "fas fa-briefcase",
+      "responsibilities": [
+        "Automatisation du reporting RH via VBA",
+        "Création de tableaux de bord dynamiques",
+        "Intégration de solutions IA pour optimiser le tri des candidatures"
+      ]
+    },
+    {
+      "title": "Stage en Logistique",
+      "company": "Groupe Ambroise Paré",
+      "location": "Clichy-sous-Bois, France",
+      "period": "Juillet 2022 — Août 2022",
+      "periodShort": "Juillet 2022 - Août 2022",
+      "description": "Logisticien",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn6s03M2-ppPYxCWARnFmf3vAiVk0STVvOyw&s",
+      "icon": "fas fa-briefcase",
+      "responsibilities": [
+        "Optimisation des flux d'inventaire",
+        "Gestion de l'approvisionnement",
+        "Création et mise à jour des dotations"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "EFREI Paris",
+      "degree": "Master Big Data & ML",
+      "period": "2024-2026",
+      "periodShort": "Août 2024 - Aujourd'hui",
+      "description": "Grande École, Ingénieur Informatique (Apprentissage)",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_-VVCpieEvVM9OlQIPqqMD1AWiAsx4vGyP0Q1B1Zscg&s",
+      "icon": "fas fa-graduation-cap",
+      "courses": [
+        "Machine Learning, Deep Learning",
+        "Data Engineering, Data Lakes",
+        "DevOps & MLOps",
+        "Programmation fonctionnelle (Scala)",
+        "Cloud (AWS / Azure)"
+      ]
+    },
+    {
+      "school": "CY Tech",
+      "degree": "Ingénierie Informatique",
+      "period": "2023-2024",
+      "periodShort": "Sept 2023 - Juin 2024",
+      "description": "Grande École, Informatique (Apprentissage)",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8rakpiBSGWNfvX9-c0caPuvkKSIoy7-bjLg&s",
+      "icon": "fas fa-graduation-cap",
+      "courses": [
+        "Algorithmes & programmation",
+        "Bases de données, OS",
+        "Optimisation linéaire",
+        "Programmation Web"
+      ]
+    },
+    {
+      "school": "INSA Rouen",
+      "degree": "Cycle Préparatoire",
+      "period": "2021-2023",
+      "periodShort": "Sept 2021 - Juin 2023",
+      "description": "Sciences et Techniques de l'Ingénieur",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCAHq0A4OIckeCHwD_Y8oXi5mj7wcpgMjf5Q&s",
+      "icon": "fas fa-graduation-cap",
+      "courses": [
+        "Informatique (algo, IA, data)",
+        "Mathématiques appliquées",
+        "Physique",
+        "Projets d'équipe"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AirportProject (Scala)",
+      "subtitle": "Application de gestion d'aéroports",
+      "description": "Application Scala qui analyse trois fichiers CSV (pays, aéroports, pistes) et propose une recherche par code ou nom approximatif.",
+      "icon": "fas fa-plane",
+      "features": [
+        "Parsing CSV personnalisé",
+        "Fuzzy matching",
+        "Interface JavaFX et mode CLI",
+        "Futures Scala pour traitement parallèle"
+      ],
+      "link": "https://github.com/Simiamine/ScalaAirportManager/"
+    },
+    {
+      "name": "Diabetes Machine Learning",
+      "subtitle": "Classification du diabète",
+      "description": "Projet EFREI pour prédire l'apparition du diabète avec le dataset Pima Indians Diabetes.",
+      "icon": "fas fa-heartbeat",
+      "features": [
+        "Régression Logistique",
+        "Arbre de Décision",
+        "Réseau de Neurones (MLP)",
+        "Grid Search optimization"
+      ],
+      "link": "https://github.com/Simiamine/Diabetes-Machine-Learning/"
+    },
+    {
+      "name": "E-commerce",
+      "subtitle": "Stack : PHP / Django",
+      "description": "Sites e-commerce avec gestion des utilisateurs, panier, catalogue et modules de paiement sécurisé.",
+      "icon": "fas fa-shopping-cart",
+      "features": [
+        "Rôles (admin/client)",
+        "Suivi de commandes temps réel",
+        "Dashboard d'administration",
+        "Intégration d'API"
+      ],
+      "link": "https://github.com/Simiamine/Pokeshop"
+    },
+    {
+      "name": "Jeu Java (Zelda-like)",
+      "subtitle": "Jeu d'action en vue du dessus",
+      "description": "Projet Java inspiré de Zelda : A Link to the Past.",
+      "icon": "fas fa-gamepad",
+      "features": [
+        "Déplacements et combats",
+        "Interactions avec objets",
+        "Transitions intérieur/extérieur",
+        "Système d'inventaire"
+      ],
+      "link": "https://github.com/Simiamine/Zelda"
+    },
+    {
+      "name": "Éditeur d'Automates",
+      "subtitle": "C / Algorithmique",
+      "description": "Projet en langage C manipulant des automates d'états finis.",
+      "icon": "fas fa-project-diagram",
+      "features": [
+        "Création/modification d'automates",
+        "Test de reconnaissance de mots",
+        "Vérification complétude/déterminisme",
+        "Produit d'automates"
+      ],
+      "link": "https://github.com/Simiamine/ProjetCAutomate"
+    },
+    {
+      "name": "Motus (Bouche Cousue)",
+      "subtitle": "FreePascal",
+      "description": "Jeu inspiré du \"Motus\" français et de Wordle : devinez le mot mystère en 6 tentatives.",
+      "icon": "fas fa-keyboard",
+      "features": [],
+      "link": "https://github.com/Simiamine/BoucheCousue"
+    }
+  ],
+  "skills": {
+    "technologies": [
+      {
+        "name": "Python",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
+      },
+      {
+        "name": "PySpark / Spark",
+        "logo": "https://spark.apache.org/images/spark-logo-trademark.png"
+      },
+      {
+        "name": "SQL",
+        "logo": "https://logos-marques.com/wp-content/uploads/2023/09/MySQL-Logo-thmb.png"
+      },
+      {
+        "name": "Scala",
+        "logo": "https://cdn.worldvectorlogo.com/logos/scala-4.svg"
+      },
+      {
+        "name": "Java",
+        "logo": "https://0adri3n.github.io/assets/img/java.webp"
+      },
+      {
+        "name": "C/C++",
+        "logo": "https://0adri3n.github.io/assets/img/clang.png"
+      },
+      {
+        "name": "Hadoop",
+        "logo": "https://cdn.worldvectorlogo.com/logos/hadoop.svg"
+      },
+      {
+        "name": "AWS",
+        "logo": "https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+      },
+      {
+        "name": "Docker",
+        "logo": "https://cdn.worldvectorlogo.com/logos/docker-4.svg"
+      },
+      {
+        "name": "Django",
+        "logo": "https://cdn.worldvectorlogo.com/logos/django-community.svg"
+      },
+      {
+        "name": "dbt",
+        "logo": "https://seeklogo.com/images/D/dbt-logo-500AB0BAA7-seeklogo.com.png"
+      },
+      {
+        "name": "Snowflake",
+        "logo": "https://companieslogo.com/img/orig/SNOW-35164165.png"
+      },
+      {
+        "name": "Airflow",
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/d/de/AirflowLogo.png"
+      },
+      {
+        "name": "Streamlit",
+        "logo": "https://streamlit.io/images/brand/streamlit-mark-color.png"
+      }
+    ],
+    "languages": [
+      {
+        "name": "Français",
+        "level": "Maternelle",
+        "flag": "images/langues/france.png"
+      },
+      {
+        "name": "Anglais",
+        "level": "Bilingue",
+        "flag": "images/langues/royaume-uni.png"
+      },
+      {
+        "name": "Arabe",
+        "level": "Courant",
+        "flag": "images/langues/arabe.png"
+      },
+      {
+        "name": "Espagnol",
+        "level": "Basique",
+        "flag": "images/langues/espagne.png"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Azure AI-900",
+        "issuer": "Microsoft",
+        "date": "2024",
+        "logo": "https://training.cellenza.com/wp-content/uploads/2024/01/AI_Fundamentals-597x600V2.png"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2025 Amine M'ZALI. Tous droits réservés.",
+    "message": "Conçu avec ❤️ et ☕"
+  },
+  "metadata": {
+    "title": "Amine M'ZALI - Portfolio Big Data & ML",
+    "description": "Portfolio d'Amine M'ZALI - Étudiant en Big Data & Machine Learning à l'Efrei Paris",
+    "author": "Amine M'ZALI",
+    "keywords": [
+      "data science",
+      "machine learning",
+      "big data",
+      "portfolio",
+      "data analyst",
+      "data engineer"
+    ]
+  }
+}
+

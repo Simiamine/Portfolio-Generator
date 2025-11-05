@@ -1,0 +1,11 @@
+node_modules/
+output/
+test-output/
+*.log
+.DS_Store
+.env
+dist/
+build/
+temp/
+.vscode/
+.idea/

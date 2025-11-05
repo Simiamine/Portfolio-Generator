@@ -1,0 +1,467 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Portfolio Configuration Schema",
+  "description": "Schéma JSON standardisé pour la génération de portfolios personnalisés",
+  "type": "object",
+  "required": ["theme", "profile", "about", "experiences", "education", "projects", "skills"],
+  "properties": {
+    "theme": {
+      "type": "object",
+      "description": "Configuration du thème visuel",
+      "required": ["primaryColor", "secondaryColor"],
+      "properties": {
+        "primaryColor": {
+          "type": "string",
+          "description": "Couleur principale (format hex)",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "default": "#5e2933"
+        },
+        "secondaryColor": {
+          "type": "string",
+          "description": "Couleur secondaire (format hex)",
+          "pattern": "^#[0-9A-Fa-f]{6}$",
+          "default": "#815443"
+        }
+      }
+    },
+    "profile": {
+      "type": "object",
+      "description": "Informations personnelles",
+      "required": ["name", "title", "tagline", "availability"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Nom complet",
+          "example": "Amine M'ZALI"
+        },
+        "title": {
+          "type": "string",
+          "description": "Titre professionnel",
+          "example": "Futur Ingénieur Data - Efrei Paris"
+        },
+        "tagline": {
+          "type": "string",
+          "description": "Phrase d'accroche",
+          "example": "3 ans d'expérience | Disponible Sept 2026"
+        },
+        "photo": {
+          "type": "string",
+          "description": "Chemin vers la photo de profil",
+          "example": "images/moi.jpg"
+        },
+        "availability": {
+          "type": "string",
+          "description": "Disponibilité",
+          "example": "Septembre 2026"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "example": "amine.mzali@example.com"
+        },
+        "phone": {
+          "type": "string",
+          "example": "+33 6 12 34 56 78"
+        },
+        "location": {
+          "type": "string",
+          "example": "Paris, France"
+        },
+        "socialLinks": {
+          "type": "object",
+          "properties": {
+            "linkedin": {
+              "type": "string",
+              "format": "uri",
+              "example": "https://www.linkedin.com/in/mzaliamine/"
+            },
+            "github": {
+              "type": "string",
+              "format": "uri",
+              "example": "https://github.com/Simiamine"
+            },
+            "twitter": {
+              "type": "string",
+              "format": "uri"
+            },
+            "website": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        "cv": {
+          "type": "string",
+          "description": "Chemin vers le CV PDF",
+          "example": "res/cvfr.pdf"
+        }
+      }
+    },
+    "about": {
+      "type": "object",
+      "description": "Section À propos",
+      "properties": {
+        "sectionTag": {
+          "type": "string",
+          "default": "Qui suis-je ?"
+        },
+        "sectionTitle": {
+          "type": "string",
+          "default": "À propos"
+        },
+        "image": {
+          "type": "string",
+          "description": "Image d'illustration",
+          "example": "images/test.png"
+        },
+        "paragraphs": {
+          "type": "array",
+          "description": "Paragraphes de présentation",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "highlights": {
+          "type": "array",
+          "description": "Points forts/compétences clés",
+          "items": {
+            "type": "object",
+            "required": ["icon", "title", "description"],
+            "properties": {
+              "icon": {
+                "type": "string",
+                "description": "Classe FontAwesome",
+                "example": "fas fa-chart-line"
+              },
+              "title": {
+                "type": "string",
+                "example": "Data Analysis"
+              },
+              "description": {
+                "type": "string",
+                "example": "Analyse et visualisation de données"
+              }
+            }
+          }
+        },
+        "floatingCards": {
+          "type": "array",
+          "description": "Cartes flottantes sur la page d'accueil",
+          "items": {
+            "type": "object",
+            "properties": {
+              "icon": {
+                "type": "string",
+                "example": "fas fa-database"
+              },
+              "text": {
+                "type": "string",
+                "example": "Data Engineering"
+              }
+            }
+          }
+        }
+      }
+    },
+    "experiences": {
+      "type": "array",
+      "description": "Expériences professionnelles",
+      "items": {
+        "type": "object",
+        "required": ["title", "company", "period", "description"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Intitulé du poste",
+            "example": "Data Analyst (Alternance)"
+          },
+          "company": {
+            "type": "string",
+            "description": "Nom de l'entreprise",
+            "example": "Sanofi"
+          },
+          "location": {
+            "type": "string",
+            "example": "Lyon, France"
+          },
+          "period": {
+            "type": "string",
+            "description": "Période (format libre)",
+            "example": "Septembre 2025 — Aujourd'hui"
+          },
+          "periodShort": {
+            "type": "string",
+            "description": "Période courte pour la timeline",
+            "example": "Sept 2025 - Aujourd'hui"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description courte",
+            "example": "Sanofi Data Analyst"
+          },
+          "logo": {
+            "type": "string",
+            "description": "Chemin vers le logo",
+            "example": "images/sanofi.png"
+          },
+          "icon": {
+            "type": "string",
+            "description": "Icône FontAwesome pour la timeline",
+            "default": "fas fa-briefcase"
+          },
+          "responsibilities": {
+            "type": "array",
+            "description": "Liste des missions/responsabilités",
+            "items": {
+              "type": "string"
+            }
+          },
+          "link": {
+            "type": "string",
+            "format": "uri",
+            "description": "Lien vers l'entreprise"
+          }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "description": "Formations / Études",
+      "items": {
+        "type": "object",
+        "required": ["school", "degree", "period"],
+        "properties": {
+          "school": {
+            "type": "string",
+            "description": "Nom de l'établissement",
+            "example": "EFREI Paris"
+          },
+          "degree": {
+            "type": "string",
+            "description": "Diplôme/Formation",
+            "example": "Master Big Data & ML"
+          },
+          "period": {
+            "type": "string",
+            "example": "2024-2026"
+          },
+          "periodShort": {
+            "type": "string",
+            "description": "Période courte pour la timeline",
+            "example": "Août 2024 - Aujourd'hui"
+          },
+          "description": {
+            "type": "string",
+            "example": "Grande École, Ingénieur Informatique (Apprentissage)"
+          },
+          "logo": {
+            "type": "string",
+            "description": "Logo de l'école",
+            "example": "https://..."
+          },
+          "icon": {
+            "type": "string",
+            "description": "Icône FontAwesome pour la timeline",
+            "default": "fas fa-graduation-cap"
+          },
+          "courses": {
+            "type": "array",
+            "description": "Cours/Matières principales",
+            "items": {
+              "type": "string"
+            }
+          },
+          "link": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "description": "Projets personnels ou professionnels",
+      "items": {
+        "type": "object",
+        "required": ["name", "description"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Nom du projet",
+            "example": "AirportProject (Scala)"
+          },
+          "subtitle": {
+            "type": "string",
+            "description": "Sous-titre",
+            "example": "Application de gestion d'aéroports"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description détaillée"
+          },
+          "image": {
+            "type": "string",
+            "description": "Image du projet",
+            "example": "images/projets/airport.png"
+          },
+          "icon": {
+            "type": "string",
+            "description": "Icône FontAwesome",
+            "example": "fas fa-plane"
+          },
+          "features": {
+            "type": "array",
+            "description": "Fonctionnalités/caractéristiques",
+            "items": {
+              "type": "string"
+            }
+          },
+          "technologies": {
+            "type": "array",
+            "description": "Technologies utilisées",
+            "items": {
+              "type": "string"
+            }
+          },
+          "link": {
+            "type": "string",
+            "format": "uri",
+            "description": "Lien GitHub/démo"
+          },
+          "demo": {
+            "type": "string",
+            "format": "uri",
+            "description": "Lien vers la démo live"
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "object",
+      "description": "Compétences techniques et linguistiques",
+      "properties": {
+        "technologies": {
+          "type": "array",
+          "description": "Technologies/Langages/Outils",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "example": "Python"
+              },
+              "logo": {
+                "type": "string",
+                "description": "URL du logo",
+                "example": "https://..."
+              },
+              "level": {
+                "type": "integer",
+                "description": "Niveau (0-100) si vous voulez des barres de progression",
+                "minimum": 0,
+                "maximum": 100
+              }
+            }
+          }
+        },
+        "languages": {
+          "type": "array",
+          "description": "Langues parlées",
+          "items": {
+            "type": "object",
+            "required": ["name", "level"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "example": "Français"
+              },
+              "level": {
+                "type": "string",
+                "description": "Niveau",
+                "example": "Maternelle"
+              },
+              "flag": {
+                "type": "string",
+                "description": "Chemin vers le drapeau",
+                "example": "images/langues/france.png"
+              }
+            }
+          }
+        },
+        "certifications": {
+          "type": "array",
+          "description": "Certifications",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "example": "Azure AI-900"
+              },
+              "issuer": {
+                "type": "string",
+                "example": "Microsoft"
+              },
+              "date": {
+                "type": "string",
+                "example": "2024"
+              },
+              "logo": {
+                "type": "string",
+                "description": "URL du badge"
+              },
+              "link": {
+                "type": "string",
+                "format": "uri",
+                "description": "Lien de vérification"
+              }
+            }
+          }
+        }
+      }
+    },
+    "footer": {
+      "type": "object",
+      "description": "Pied de page",
+      "properties": {
+        "copyright": {
+          "type": "string",
+          "example": "© 2025 Amine M'ZALI. Tous droits réservés."
+        },
+        "message": {
+          "type": "string",
+          "example": "Conçu avec ❤️ et ☕"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Métadonnées pour le SEO",
+      "properties": {
+        "title": {
+          "type": "string",
+          "example": "Amine M'ZALI - Portfolio Big Data & ML"
+        },
+        "description": {
+          "type": "string",
+          "example": "Portfolio d'Amine M'ZALI - Étudiant en Big Data & Machine Learning à l'Efrei Paris"
+        },
+        "author": {
+          "type": "string",
+          "example": "Amine M'ZALI"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "example": ["data science", "machine learning", "portfolio"]
+        }
+      }
+    }
+  }
+}
+

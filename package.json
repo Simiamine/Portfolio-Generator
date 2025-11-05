@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-generator",
+  "version": "1.0.0",
+  "description": "Générateur de portfolio personnalisé avec interface visuelle et format JSON réutilisable",
+  "main": "build-portfolio.js",
+  "scripts": {
+    "build": "node build-portfolio.js",
+    "start": "open index.html || xdg-open index.html || start index.html",
+    "generate": "node build-portfolio.js example-config.json output"
+  },
+  "keywords": [
+    "portfolio",
+    "generator",
+    "theme",
+    "web",
+    "static-site"
+  ],
+  "author": "Amine M'ZALI",
+  "license": "MIT",
+  "bin": {
+    "portfolio-gen": "./build-portfolio.js"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
+

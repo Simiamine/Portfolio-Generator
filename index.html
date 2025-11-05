@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Portfolio - Configuration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .main-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 1rem 2rem;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #6c757d;
+            transition: all 0.3s;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            background: #e9ecef;
+            color: #495057;
+        }
+
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            background: white;
+        }
+
+        .tab i {
+            margin-right: 0.5rem;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 2rem;
+            animation: fadeIn 0.3s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-label .required {
+            color: #dc3545;
+            margin-left: 0.25rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .color-picker-group {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-picker-wrapper {
+            flex: 1;
+        }
+
+        .color-preview {
+            width: 100%;
+            height: 100px;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            border: 2px solid #e9ecef;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .color-preview:hover {
+            transform: scale(1.05);
+        }
+
+        .color-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .palette-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .palette-color {
+            text-align: center;
+        }
+
+        .palette-color-box {
+            height: 80px;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            border: 2px solid #e9ecef;
+        }
+
+        .palette-color-name {
+            font-size: 0.85rem;
+            color: #6c757d;
+            font-weight: 600;
+        }
+
+        .palette-color-value {
+            font-size: 0.75rem;
+            color: #adb5bd;
+            font-family: monospace;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        .btn-outline {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-outline:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .dynamic-list {
+            margin-top: 1rem;
+        }
+
+        .list-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 2px solid #e9ecef;
+            position: relative;
+        }
+
+        .list-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .list-item-title {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.1rem;
+        }
+
+        .list-item-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-icon {
+            width: 36px;
+            height: 36px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .file-upload {
+            border: 2px dashed #667eea;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .file-upload:hover {
+            background: #e9ecef;
+            border-color: #764ba2;
+        }
+
+        .file-upload i {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .tabs {
+                flex-wrap: wrap;
+            }
+
+            .tab {
+                flex: 1 1 auto;
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .color-picker-group {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tech-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+            position: relative;
+        }
+
+        .remove-tech {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-magic"></i> Générateur de Portfolio</h1>
+            <p>Créez votre portfolio personnalisé en quelques clics ✨</p>
+        </div>
+
+        <div class="main-card">
+            <div class="tabs">
+                <button class="tab active" data-tab="theme">
+                    <i class="fas fa-palette"></i> Thème
+                </button>
+                <button class="tab" data-tab="profile">
+                    <i class="fas fa-user"></i> Profil
+                </button>
+                <button class="tab" data-tab="about">
+                    <i class="fas fa-info-circle"></i> À propos
+                </button>
+                <button class="tab" data-tab="experience">
+                    <i class="fas fa-briefcase"></i> Expériences
+                </button>
+                <button class="tab" data-tab="education">
+                    <i class="fas fa-graduation-cap"></i> Formation
+                </button>
+                <button class="tab" data-tab="projects">
+                    <i class="fas fa-folder-open"></i> Projets
+                </button>
+                <button class="tab" data-tab="skills">
+                    <i class="fas fa-code"></i> Compétences
+                </button>
+                <button class="tab" data-tab="export">
+                    <i class="fas fa-download"></i> Export
+                </button>
+            </div>
+
+            <!-- TAB: THEME -->
+            <div class="tab-content active" id="theme">
+                <h2>🎨 Configuration du Thème</h2>
+                <p style="color: #6c757d; margin-bottom: 2rem;">
+                    Choisissez 2 couleurs principales et nous générerons automatiquement toutes les variations 
+                    (tons clairs, foncés, gradients, ombres, etc.)
+                </p>
+
+                <div class="color-picker-group">
+                    <div class="color-picker-wrapper">
+                        <label class="form-label">Couleur Principale <span class="required">*</span></label>
+                        <div class="color-preview" id="primaryColorPreview" style="background: #5e2933;"></div>
+                        <input type="text" class="color-input" id="primaryColor" value="#5e2933" placeholder="#5e2933">
+                    </div>
+
+                    <div class="color-picker-wrapper">
+                        <label class="form-label">Couleur Secondaire <span class="required">*</span></label>
+                        <div class="color-preview" id="secondaryColorPreview" style="background: #815443;"></div>
+                        <input type="text" class="color-input" id="secondaryColor" value="#815443" placeholder="#815443">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="generatePalettePreview()">
+                    <i class="fas fa-sync"></i> Générer la Palette
+                </button>
+
+                <div class="palette-preview" id="palettePreview" style="display: none;">
+                    <!-- Sera rempli dynamiquement -->
+                </div>
+            </div>
+
+            <!-- TAB: PROFILE -->
+            <div class="tab-content" id="profile">
+                <h2>👤 Informations de Profil</h2>
+                
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label">Nom complet <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="profileName" placeholder="Jean Dupont">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Titre professionnel <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="profileTitle" placeholder="Développeur Full Stack">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Phrase d'accroche <span class="required">*</span></label>
+                    <input type="text" class="form-control" id="profileTagline" placeholder="5 ans d'expérience | Disponible immédiatement">
+                </div>
+
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" id="profileEmail" placeholder="jean.dupont@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Téléphone</label>
+                        <input type="tel" class="form-control" id="profilePhone" placeholder="+33 6 12 34 56 78">
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label">Localisation</label>
+                        <input type="text" class="form-control" id="profileLocation" placeholder="Paris, France">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Disponibilité</label>
+                        <input type="text" class="form-control" id="profileAvailability" placeholder="Immédiatement">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Photo de profil (chemin ou URL)</label>
+                    <input type="text" class="form-control" id="profilePhoto" placeholder="images/moi.jpg">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">CV PDF (chemin ou URL)</label>
+                    <input type="text" class="form-control" id="profileCV" placeholder="res/cv.pdf">
+                </div>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">🔗 Réseaux Sociaux</h3>
+
+                <div class="grid-2">
+                    <div class="form-group">
+                        <label class="form-label"><i class="fab fa-linkedin"></i> LinkedIn</label>
+                        <input type="url" class="form-control" id="linkedinUrl" placeholder="https://linkedin.com/in/username">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label"><i class="fab fa-github"></i> GitHub</label>
+                        <input type="url" class="form-control" id="githubUrl" placeholder="https://github.com/username">
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB: ABOUT -->
+            <div class="tab-content" id="about">
+                <h2>ℹ️ Section À Propos</h2>
+
+                <div class="form-group">
+                    <label class="form-label">Tag de section</label>
+                    <input type="text" class="form-control" id="aboutTag" value="Qui suis-je ?" placeholder="Qui suis-je ?">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Titre de section</label>
+                    <input type="text" class="form-control" id="aboutTitle" value="À propos" placeholder="À propos">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Image d'illustration</label>
+                    <input type="text" class="form-control" id="aboutImage" placeholder="images/about.png">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Paragraphes de présentation</label>
+                    <textarea class="form-control" id="aboutParagraph1" placeholder="Premier paragraphe..." rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" id="aboutParagraph2" placeholder="Deuxième paragraphe (optionnel)..." rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" id="aboutParagraph3" placeholder="Troisième paragraphe (optionnel)..." rows="3"></textarea>
+                </div>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">✨ Points forts (Highlights)</h3>
+                <button class="btn btn-secondary" onclick="addHighlight()">
+                    <i class="fas fa-plus"></i> Ajouter un point fort
+                </button>
+                <div id="highlightsList" class="dynamic-list"></div>
+            </div>
+
+            <!-- TAB: EXPERIENCE -->
+            <div class="tab-content" id="experience">
+                <h2>💼 Expériences Professionnelles</h2>
+                <button class="btn btn-secondary" onclick="addExperience()">
+                    <i class="fas fa-plus"></i> Ajouter une expérience
+                </button>
+                <div id="experiencesList" class="dynamic-list"></div>
+            </div>
+
+            <!-- TAB: EDUCATION -->
+            <div class="tab-content" id="education">
+                <h2>🎓 Formation</h2>
+                <button class="btn btn-secondary" onclick="addEducation()">
+                    <i class="fas fa-plus"></i> Ajouter une formation
+                </button>
+                <div id="educationList" class="dynamic-list"></div>
+            </div>
+
+            <!-- TAB: PROJECTS -->
+            <div class="tab-content" id="projects">
+                <h2>📁 Projets</h2>
+                <button class="btn btn-secondary" onclick="addProject()">
+                    <i class="fas fa-plus"></i> Ajouter un projet
+                </button>
+                <div id="projectsList" class="dynamic-list"></div>
+            </div>
+
+            <!-- TAB: SKILLS -->
+            <div class="tab-content" id="skills">
+                <h2>⚡ Compétences</h2>
+                
+                <h3 style="margin-bottom: 1rem;">Technologies / Langages</h3>
+                <button class="btn btn-secondary" onclick="addTechnology()">
+                    <i class="fas fa-plus"></i> Ajouter une technologie
+                </button>
+                <div id="technologiesList" class="tech-grid"></div>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Langues</h3>
+                <button class="btn btn-secondary" onclick="addLanguage()">
+                    <i class="fas fa-plus"></i> Ajouter une langue
+                </button>
+                <div id="languagesList" class="dynamic-list"></div>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Certifications</h3>
+                <button class="btn btn-secondary" onclick="addCertification()">
+                    <i class="fas fa-plus"></i> Ajouter une certification
+                </button>
+                <div id="certificationsList" class="dynamic-list"></div>
+            </div>
+
+            <!-- TAB: EXPORT -->
+            <div class="tab-content" id="export">
+                <h2>📦 Export & Import</h2>
+
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    <strong>Astuce :</strong> Vous pouvez sauvegarder votre configuration en JSON pour la réutiliser plus tard 
+                    ou la partager avec d'autres applications.
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-primary" onclick="generatePortfolio()">
+                        <i class="fas fa-rocket"></i> Générer le Portfolio Complet
+                    </button>
+
+                    <button class="btn btn-success" onclick="exportJSON()">
+                        <i class="fas fa-file-export"></i> Exporter la Configuration JSON
+                    </button>
+
+                    <button class="btn btn-outline" onclick="document.getElementById('importFile').click()">
+                        <i class="fas fa-file-import"></i> Importer une Configuration
+                    </button>
+                    <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importJSON(event)">
+                </div>
+
+                <div id="exportProgress" class="hidden" style="margin-top: 2rem;">
+                    <h3>Génération en cours...</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p id="progressText" style="margin-top: 0.5rem; color: #6c757d;"></p>
+                </div>
+
+                <div id="exportSuccess" class="hidden" style="margin-top: 2rem;">
+                    <div class="alert alert-success">
+                        <i class="fas fa-check-circle"></i>
+                        <strong>Succès !</strong> Votre portfolio a été généré avec succès.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="theme-engine.js"></script>
+    <script src="generator.js"></script>
+</body>
+</html>
+
